@@ -1,11 +1,12 @@
 from django.db import models
 from ..asignaturas.models import Asignaturas
 from ..alumnos.models import Alumnos
+from ..profesores.models import Profesores
 # Create your models here.
 class Examen(models.Model):
     fecha_creacion = models.DateField()
     asignatura = models.ForeignKey(Asignaturas,on_delete=models.CASCADE)
-
+    profesor = models.ForeignKey(Profesores,on_delete=models.CASCADE)
 
 class AsignacionExamen(models.Model):
     alumno = models.ForeignKey(Alumnos,on_delete=models.CASCADE)
