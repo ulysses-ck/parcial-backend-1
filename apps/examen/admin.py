@@ -3,7 +3,7 @@ from .models import Examen, AsignacionExamen
 # Register your models here.
 @admin.register(Examen)
 class ExamenAdmin(admin.ModelAdmin):
-    list_display = ('fecha_creacion',
+    list_display = ('titulo','fecha_creacion',
 'asignatura',
 'profesor')
     

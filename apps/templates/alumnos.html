@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificaciones</title>
+</head>
+<body>
+    <div>
+        {% for alumno in alumnos %}
+        <h1>Alumno: {{ alumno.nombre }} {{ alumno.apellido }}</h1>
+        <ul>
+            <li>Asignatura: {{ asignatura.examen }}</li>
+            <li>Examen: {{ examen.titulo }} </li>
+            <li>Calificacion: {{ asignacionExamen.calificacion }}</li>
+        </ul>
+        {% endfor %}
+    </div>
+</body>
+</html>
