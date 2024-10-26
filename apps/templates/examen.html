@@ -8,11 +8,12 @@
 </head>
 <body>
     <div>
-        <h1>Alumnos sin dar examen:</h1>
+        <h1>Alumnos con examen:</h1>
+        {% for examen in examenes %}
         <ul>
-            {% for exin examenes%}
-            <li>Alumno: {{ examen.fecha_creacion }} {{ alumno.apellido }}</li>
+            <li>Alumno: {{ examen.fecha_creacion }} {{ examen.titulo }} {{examen.asignatura}}</li>
         </ul>
+        {% endfor % }
     </div>
 </body>
 </html>
